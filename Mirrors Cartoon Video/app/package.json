@@ -1,0 +1,20 @@
+{
+  "name": "mirrors-cartoon-film",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit -p tsconfig.json && vite build",
+    "analyze": "bun scripts/prepare-data.ts",
+    "render": "bun scripts/render.ts video --from 0 --to 22.8 --fps 60 --samples 4 --shutter 0.18 --speed 1 --out ../out/mirrors.mp4"
+  },
+  "dependencies": { "opentype.js": "^2.0.0", "three": "0.186.0" },
+  "devDependencies": {
+    "@types/bun": "^1.2.5",
+    "@types/opentype.js": "^1.3.10",
+    "@types/three": "^0.186.0",
+    "playwright-core": "1.63.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0"
+  }
+}
